@@ -171,9 +171,10 @@ const styles = theme => ({
   root: {
     width: '100%',
     marginTop: theme.spacing.unit * 3,
+    overflowX: 'auto',
   },
   table: {
-    minWidth: 1020,
+    minWidth: 500,
   },
   tableWrapper: {
     overflowX: 'auto',
@@ -186,7 +187,7 @@ class ShoppingCartTable extends React.Component {
 
     this.state = {
       order: 'asc',
-      orderBy: 'calories',
+      orderBy: 'name',
       selected: [],
       data: [
         createData('Cupcake', 305, 3.7, 67, 4.3),
@@ -204,7 +205,7 @@ class ShoppingCartTable extends React.Component {
         createData('Oreo', 437, 18.0, 63, 4.0),
       ],
       page: 0,
-      rowsPerPage: 5,
+      rowsPerPage: 7,
     };
   }
 
@@ -298,10 +299,9 @@ class ShoppingCartTable extends React.Component {
                       <TableCell component="th" scope="row" padding="none">
                         {n.name}
                       </TableCell>
-                      <TableCell numeric>{n.calories}</TableCell>
-                      <TableCell numeric>{n.fat}</TableCell>
-                      <TableCell numeric>{n.carbs}</TableCell>
-                      <TableCell numeric>{n.protein}</TableCell>
+                      <TableCell numeric>{n.amount}</TableCell>
+                      <TableCell numeric>{n.price}</TableCell>
+                      <TableCell numeric>{n.total}</TableCell>
                     </TableRow>
                   );
                 })}

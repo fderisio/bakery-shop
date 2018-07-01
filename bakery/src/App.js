@@ -15,7 +15,7 @@ class App extends Component {
           <div style={ {float:'left', width:'35%'} }>
             <Grid />
           </div>
-          <div style={ {float:'right', width:'65%', marginRight: 20} }>
+          <div style={ {float:'right', width:'60%', marginRight: 5} }>
             <ShoppingCartTable />
           </div>
         </div>
