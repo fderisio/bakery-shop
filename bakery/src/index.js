@@ -13,7 +13,7 @@ ReactDOM.render(
       <Router>
       	<Switch>
             <Route exact path="/" component={App} />
-		    </Switch>
+		</Switch>
       </Router>
     </Provider>,
     document.getElementById('root')

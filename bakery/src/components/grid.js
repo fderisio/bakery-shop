@@ -7,6 +7,7 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import tileData from './tileData';
 
 const styles = theme => ({
@@ -19,30 +20,13 @@ const styles = theme => ({
   },
   gridList: {
     width: 500,
-    height: 800,
+    height: 600,
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
 });
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
 function CakesGrid(props) {
   const { classes } = props;
 
@@ -60,7 +44,7 @@ function CakesGrid(props) {
               subtitle={<span>USD {tile.price}</span>}
               actionIcon={
                 <IconButton className={classes.icon}>
-                  <InfoIcon />
+                  <ShoppingCartIcon />
                 </IconButton>
               }
             />
